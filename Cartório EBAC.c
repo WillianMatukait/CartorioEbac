@@ -139,7 +139,8 @@ int main()
 		printf("=== Bem vindo ao cartório EBAC ===\n\n"); //inicio Menu
 		printf("\t 1- Adicionar nomes\n");
 		printf("\t 2- Consultar nomes \n");
-		printf("\t 3- Deletar nomes \n\n");
+		printf("\t 3- Deletar nomes \n");
+		printf("\t 4- Sair do sistema \n");
 		printf("escolha: ");
 		scanf("%d", &opcao); //final menu
 	
@@ -159,6 +160,11 @@ int main()
 			deletar(); //chamada de funções
 			break;//final opção 3
 	
+			case 4://inicio opção 4
+			printf("Obrigado por utilizar o sistema!");
+			return 0;
+			break;//final opção 4
+				
 			default://opção n/a
 			printf("Opção invalida \n");
 			system("pause"); //pausa no código
