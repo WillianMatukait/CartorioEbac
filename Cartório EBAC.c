@@ -128,48 +128,64 @@ int main()
 	//inicio das variáveis
 	int opcao=0;
 	int laco=1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	//fim das variáveis
 	
-	for (laco=1;laco=1;)//laço de repetição para retornar ao menu
+	printf("=== Bem vindo ao cartório EBAC ===\n\n");
+	printf("Login de administrador!\n\nDigite a sua senha: ");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	
+	if(comparacao == 0)
 	{
 	
-		system("cls"); //limpa tela
-		setlocale(LC_ALL, "Portuguese"); //setar linguaguem de escrita
-	
-		printf("=== Bem vindo ao cartório EBAC ===\n\n"); //inicio Menu
-		printf("\t 1- Adicionar nomes\n");
-		printf("\t 2- Consultar nomes \n");
-		printf("\t 3- Deletar nomes \n");
-		printf("\t 4- Sair do sistema \n");
-		printf("escolha: ");
-		scanf("%d", &opcao); //final menu
-	
-		system("cls");//limpa tela
-	
-		switch(opcao) // opções do menu
+		for (laco=1;laco=1;)//laço de repetição para retornar ao menu
 		{
-			case 1: //inicio opção 1
-			registro(); //chamada de funções
-			break; //final opção 1
 	
-			case 2: //inicio opção 2
-			consulta(); //chamada de funções
-			break;//final opção 2
+			system("cls"); //limpa tela
+			setlocale(LC_ALL, "Portuguese"); //setar linguaguem de escrita
 	
-			case 3://inicio opção 3
-			deletar(); //chamada de funções
-			break;//final opção 3
+			printf("=== Bem vindo ao cartório EBAC ===\n\n"); //inicio Menu
+			printf("\t 1- Adicionar nomes\n");
+			printf("\t 2- Consultar nomes \n");
+			printf("\t 3- Deletar nomes \n");
+			printf("\t 4- Sair do sistema \n\n");
+			printf("escolha: ");
+			scanf("%d", &opcao); //final menu
 	
-			case 4://inicio opção 4
-			printf("Obrigado por utilizar o sistema!");
-			return 0;
-			break;//final opção 4
+			system("cls");//limpa tela
+	
+			switch(opcao) // opções do menu
+			{
+				case 1: //inicio opção 1
+				registro(); //chamada de funções
+				break; //final opção 1
+	
+				case 2: //inicio opção 2
+				consulta(); //chamada de funções
+				break;//final opção 2
+	
+				case 3://inicio opção 3
+				deletar(); //chamada de funções
+				break;//final opção 3
+	
+				case 4://inicio opção 4
+				printf("Obrigado por utilizar o sistema!");
+				return 0; // quebra o código (finaliza)
+				break;//final opção 4
 				
-			default://opção n/a
-			printf("Opção invalida \n");
-			system("pause"); //pausa no código
-			break;//final opção n/a
+				default://opção n/a
+				printf("Opção invalida \n");
+				system("pause"); //pausa no código
+				break;//final opção n/a
 			
+ 			}
  		}
  	}
+ 	
+ 	else
+ 		printf("Senha incorreta!");
 }
